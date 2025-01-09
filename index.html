@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naraine English</title>
+  <title>Learn Vocabulary</title>
 
   <link rel="stylesheet" href="./style.css" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="16x16" href="https://naraine.tech/assets/favicon-b/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon.ico" />
 
   <!-- FontAwesome Css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -20,13 +20,17 @@
 
 <body>
 
+  <!-- preloader -->
+  <div class="preloader" id="preloader">
+    <img src="./load.png" alt="image">
+  </div>
 
   <!-- Top Bottom Scroll -->
   <div class="scroll">
     <p id="top">
       T
     </p>
-    <input type="text" id="searchInput" placeholder="Search your words Here" oninput="searchWords()">
+    <!-- <input type="text" id="searchInput" placeholder="Search your words Here"> -->
     <p id="bottom">
       B
     </p>

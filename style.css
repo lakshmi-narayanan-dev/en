@@ -35,6 +35,54 @@ html {
 
 /* -------------------------------------- */
 
+/* -------------------------------------- */
+/* preloader */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: #ff0000;
+  z-index: 10000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease !important;
+}
+
+.preloader img {
+  max-height: 40vh;
+  animation: scaleUp 2s infinite;
+  animation-delay: 1s;
+  /* Apply animation */
+}
+
+.hide{
+  display: none;
+  pointer-events: none; /* Disable interaction while it's hidden */
+  transition: all 1s ease;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+    /* Original size */
+  }
+
+  100% {
+    transform: scale(70);
+    /* Scaled up to 10x */
+  }
+}
+
+/* -------------------------------------- */
+
+
+/* -------------------------------------- */
 .scroll {
   position: fixed;
   display: flex;
@@ -48,7 +96,7 @@ html {
   z-index: 100 !important;
 }
 
-.scroll p{
+.scroll p {
   background-color: rgb(255, 255, 255);
   padding: .7rem .9rem;
   display: flex;
@@ -57,7 +105,7 @@ html {
   font-weight: 700 !important;
 }
 
-.scroll input{
+.scroll input {
   min-width: calc(100vw - 100px);
   max-width: calc(100vw - 100px);
   align-self: stretch;
@@ -71,7 +119,7 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
-  .scroll input{
+  .scroll input {
     min-width: calc(100vw - 82px);
     max-width: calc(100vw - 82px);
   }

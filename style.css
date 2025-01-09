@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+@font-face {
+  font-family: Gotham;
+  src: url('https://naraine.tech/assets/fonts/Gotham/GothamCond-Black.woff2') format('woff2');
+  font-display: swap;
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: Gotham !important; */
+  font-family: "Space Grotesk", serif !important;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase !important;
+  line-height: 1.8;
+}
+
+body,
+html {
+  zoom: 1 !important;
+  scroll-behavior: smooth !important;
+  max-width: 100%;
+  overflow-x: hidden;
+  transition: none !important;
+  position: relative;
+}
+
+/* -------------------------------------- */
+
+.scroll {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgb(255, 255, 255); */
+  min-width: 100%;
+  max-width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100 !important;
+}
+
+.scroll p{
+  background-color: rgb(255, 255, 255);
+  padding: .7rem .9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700 !important;
+}
+
+.scroll input{
+  min-width: calc(100vw - 100px);
+  max-width: calc(100vw - 100px);
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .scroll input{
+    min-width: calc(100vw - 82px);
+    max-width: calc(100vw - 82px);
+  }
+}
+
+
+/* -------------------------------------- */
+/* Course Section */
+.course {
+  padding: 2rem 2rem 4rem;
+  background-color: transparent;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 0%);
+}
+
+.course * {
+  font-weight: 200 !important;
+  color: #ffffff;
+}
+
+/* Course Heading */
+.course-heading {
+  font-size: 1.1rem;
+  font-weight: 900 !important;
+  margin-bottom: .5rem;
+  max-width: max-content;
+  padding: .6rem 1rem .55rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: .5rem;
+  justify-content: center;
+}
+
+.course .course-heading {
+  background-color: white;
+  color: black;
+}
+
+/* Grid section */
+.course-details {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  /* Fixed column width */
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 5px;
+  transition: all 1s ease !important;
+}
+
+.course .course-details h3 {
+  width: 100%;
+  -ms-grid-column: 8;
+  -webkit-grid-column: span 8;
+  -moz-grid-column: span 8;
+  grid-column: span 8;
+  font-weight: 700 !important;
+  text-align: left;
+  margin: 5rem 0 1rem;
+  text-decoration: 1px solid underline;
+  padding-left: .1rem;
+  font-size: 1.25rem;
+  text-underline-offset: 10px;
+}
+
+.course .course-details h3:first-child {
+  margin-top: 3rem;
+}
+
+/* Box */
+.course .course-details-box {
+  border: 2px solid #ff0000;
+  padding: 1.15rem;
+  min-height: 4rem;
+  max-height: 4rem;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  transition: max-height .5s ease 0s;
+}
+
+.course-details-box:hover,
+.course-details-box:active,
+.course-details-box:focus {
+  background-color: #ff0000;
+  border: none;
+  cursor: pointer;
+  transition: max-height .5s ease 0s;
+  max-height: 150rem;
+}
+
+.course-details-box:hover *,
+.course-details-box:active *,
+.course-details-box:focus * {
+  color: black !important;
+}
+
+.course-details h2 {
+  position: relative;
+  padding-left: 1.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 700 !important;
+}
+
+.course-details-box h5,
+.course-details-box h6,
+.course-details p {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-top: 1.25rem;
+  transform: translateY(1000px);
+  transition: transform 1s ease;
+  text-align: left;
+  font-weight: 500 !important;
+}
+
+.course-details-box:hover h5,
+.course-details-box:hover h6,
+.course-details-box:hover p,
+.course-details-box:active h5,
+.course-details-box:active h6,
+.course-details-box:active p,
+.course-details-box:focus h5,
+.course-details-box:focus h6,
+.course-details-box:focus p {
+  transform: translateY(0);
+  transition: transform .7s ease;
+}
+
+.course-details-box h2::before {
+  content: "Q. ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.course-details-box h6::before {
+  content: "E. ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.course-details-box h5::before {
+  content: "- ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.course-details-box:hover h2 {
+  white-space: wrap;
+}
+
+@media screen and (max-width: 1600px) {
+
+  /* Grid section */
+  .course-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* Fixed column width */
+    grid-auto-rows: minmax(10px, auto);
+    grid-gap: 5px;
+    transition: all 1s ease !important;
+  }
+
+  .course .course-details h3 {
+    width: 100%;
+    -ms-grid-column: 5;
+    -webkit-grid-column: span 5;
+    -moz-grid-column: span 5;
+    grid-column: span 5;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .course {
+    padding: 1.25rem 1rem;
+  }
+
+  .course-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .course-details-box {
+    min-width: calc(50% - 0.4rem);
+    max-width: calc(50% - 0.4rem);
+    margin: 0.1rem 0 0 0.1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .course-details-box {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .extension .course-details {
+    grid-gap: 10px;
+  }
+
+  .extension .course-details h4 {
+    max-width: calc(50% - 5px);
+    min-width: calc(50% - 5px);
+    align-self: stretch;
+  }
+}
